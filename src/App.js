@@ -12,14 +12,26 @@ function App() {
   const { loading, error, data } = useQuery(JOB_LISTS)
 
   useEffect(() => {
-    if(data)
+    if (data)
       dispatch(cacheQueriedData(data))
 
-      // eslint-disable-next-line 
+    // eslint-disable-next-line 
   }, [data])
 
-  if (loading) return 'Loading...'
-  if (error) return `Error! ${error.message}`
+  if (loading)
+    return (
+      <div>
+        Loading...
+      </div>
+    )
+
+  if (error)
+    return (
+      <div>
+        `Error! ${error.message}`
+      </div>
+    )
+
 
   return (
     <>
