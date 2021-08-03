@@ -1,0 +1,1 @@
+export const CACHE_QUERIED_DATA = 'CACHE_QUERIED_DATA'
