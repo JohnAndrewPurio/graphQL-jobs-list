@@ -21,19 +21,19 @@ export default function JobCard({ cities, tags, title, applyUrl, description }) 
         <Paper elevation={3} className={classes.card} align="center">
             <Grid container className={classes.container} spacing={2}>
                 <Typography variant="h6" component="p">{title}</Typography>
-                <Grid container gap={1} justify="center">
+                <Grid container gap={1} justifyContent="center">
                     {
                         tags.map((tag, index) => (
-                            <Button className={classes.button} key={index} size="small" variant="contained" color='primary'>
+                            <Button className={classes.button} key={title + tag.name} size="small" variant="contained" color='primary'>
                                 {tag.name}
                             </Button>
                         ))
                     }
                 </Grid>
-                <Grid container gap={1} flexWrap="wrap" justify="center">
+                <Grid container gap={1} flexwrap="wrap" justifyContent="center">
                     {
                         cities.map((city, index) => (
-                            <Button className={classes.button} key={index} size="small" variant="contained" color='secondary'>
+                            <Button className={classes.button} key={title + city.name} size="small" variant="contained" color='secondary'>
                                 {city.name}
                             </Button>
                         ))

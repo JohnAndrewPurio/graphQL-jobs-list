@@ -6,11 +6,11 @@ export default function Content() {
     const data = useSelector(state => state.data)
 
     return (
-        <Grid container flexWrap="wrap">
+        <Grid container flexwrap="wrap">
             {
                 data?.jobs.map(({ cities, tags, title, id, applyUrl, description }, index) => (
-                    <Grid item xs={4} alignItems="center" justifyContent="center">
-                        <JobCard key={index} cities={cities} tags={tags} title={title} applyUrl={applyUrl} description={description} />
+                    <Grid item xs={4}>
+                        <JobCard key={id} cities={cities} tags={tags} title={title} applyUrl={applyUrl} description={description} />
                     </Grid>
                 ))
             }
