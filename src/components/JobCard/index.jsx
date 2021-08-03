@@ -30,7 +30,7 @@ export default function JobCard({ cities, tags, title, applyUrl, description }) 
                         ))
                     }
                 </Grid>
-                <Grid container gap={1} flexwrap="wrap" justifyContent="center">
+                <Grid container gap={1} justifyContent="center">
                     {
                         cities.map((city, index) => (
                             <Button className={classes.button} key={title + city.name} size="small" variant="contained" color='secondary'>
